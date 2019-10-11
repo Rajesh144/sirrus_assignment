@@ -1,0 +1,33 @@
+"locations": [
+{
+" _id ": "224155332" ,
+" description ": "In Greenview No. 16, animals on roadway on AB-40 EB between Forestry Trunk Rd and Pierre Greys Lake Rd." ,
+" geo ": {
+" type ": "Point" ,
+" coordinates ": [-118.67265 ,53.924755]
+} ,
+" roadName ": "AB-40" ,
+" eventCode ": 922 ,
+" severity ": 2 ,
+" validStart ": "2018-10-26T13:39:58.000Z" ,
+" validEnd ": "2019-07-20T00:51:19.000Z" ,
+" type ": "TrafficIncident" ,
+" lastUpdated ": "2019-07-20T00:23:12.748Z"
+},
+{
+" _id ": "223155366" ,
+" description ": "In Gibson, object on roadway on PA-120 EB between Churcht and Church St." ,
+" tmc ": {
+" table ": 4 ,
+" id ": 12915 ,
+" direction ": "+" ,
+}
+" eventCode ": 61 ,
+" severity ": 2 ,
+" validStart ": "2018-03-28T21:27:14.000Z" ,
+" validEnd ": "2019-07-20T00:54:26.000Z" ,
+" type ": "TrafficIncident" ,
+" lastUpdated ": "2019-07-20T00:26:16.321Z"
+}
+]
+}

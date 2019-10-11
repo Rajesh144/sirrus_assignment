@@ -1,0 +1,77 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="incident">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ti">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ev" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="id"/>
+                    <xs:element type="xs:short" name="ec"/>
+                    <xs:element type="xs:byte" name="se"/>
+                    <xs:element name="loc">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="geo" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:float" name="lon"/>
+                                  <xs:attribute type="xs:float" name="lat"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="addr" minOccurs="0"/>
+                          <xs:element name="start" minOccurs="0">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:short" name="id"/>
+                                  <xs:attribute type="xs:byte" name="dir"/>
+                                  <xs:attribute type="xs:byte" name="offset"/>
+                                  <xs:attribute type="xs:byte" name="extent"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="type" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="valid">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:dateTime" name="start" use="optional"/>
+                            <xs:attribute type="xs:dateTime" name="end" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="text">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="lang" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:byte" name="delay"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="table"/>
+            <xs:attribute type="xs:string" name="tv"/>
+            <xs:attribute type="xs:float" name="fv"/>
+            <xs:attribute type="xs:dateTime" name="at"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
